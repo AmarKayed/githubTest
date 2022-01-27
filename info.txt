@@ -69,7 +69,18 @@ Commit:
 
 
 Push:
-    git push
+    Initially we have to use:
+        git push origin master
+    
+    But we can setup an "Upstream". 
+    An Upstream basically tells Git where exactly we want to push our changes.
+    
+    We can setup an Upstream by using the following command:
+        git push -u origin master
+    
+    And thus we can from now on just use:
+        git push
+
 
     it pushes the code live onto the GitHub Repo
 
@@ -118,8 +129,29 @@ Push:
 
     We will have to type in our GitHub Password in order to confirm the addition of the key.
 
+    The only thing left to do is to make sure that our local Git CLI knows about our
+    generated keys, more about that on:
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 
+
+
+Creating Git Repository locally:
+    We can simply create a folder/directory anywhere we want and then navigate
+    to the location of the folder in our CLI and use the command:
+        git init
+
+    This initializes the current directory to be the main folder in our newly created repository.
+
+    Now in order to push our changes onto a GitHub Repository we first have to 
+    create an empty repository on the GitHub website and then we have to copy 
+    the SSH Link(under the Green Code Button) and then use the following command:
+        git remote add origin git@github.com:user/repositoryName.git
+    
+    Instead of the last argument we simply use the SSH Link we have copied.
+
+    In order to view if the git remote command worked we use:
+        git remote -v
 
 
 
