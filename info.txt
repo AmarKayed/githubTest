@@ -12,14 +12,15 @@ cd == Change Directory
 
 Git == Code Change Tracker Tool
 
-Github == Website that hosts our Git Repositories
+GitHub == Website that hosts our Git Repositories
 
 
 Git Commands:
-    - Clone     == Bring a repository that is hosted somwhere like Github into a folder on our local machine
+    - Clone     == Bring a repository that is hosted somwhere like GitHub into a folder on our local machine
+    - Status    == Shows the status of every tracked file
     - Add       == Adds files to be tracked by Git
     - Commit    == Saves the changes that have been made
-    - Push      == Uploades the Git Commits that have been made into the repo stored on Github
+    - Push      == Uploades the Git Commits that have been made into the repo stored on GitHub
 
 
 Rule:
@@ -34,14 +35,40 @@ Clone:
     The SSH_Key can be found on the Green Code Button on the Github Repository
     The SSH_Key is a link/key that is unique to our repository
 
-    After cloning, we will have a hidden .git folder, which contains info about
+    After cloning, we will have a hidden .git directory(folder), which contains info about
     our repository
+
+    We can see all the hidden files by using the command: ls -la
 
 GIT COMMANDS CAN WORK ONLY WHEN WE ARE INSIDE OF THE MAIN DIRECTORY(folder)
 
 
+Status:
+    git status
+
+    Prints info about every tracked file:
+        if it has unsaved(uncommited) changes
+        if it has commited changes but has yet to be pushed on the GitHub Repo
 
 
+
+Add:
+    git add file
+
+    it makes Git track the changes that will be made on the file
+    if we want Git to track all the files in our current working directory, we simply use:
+        git add .
+
+        
+
+
+
+
+
+Markdown styling(for README.md):
+    # Header
+    ## Subheader
+    normal text
 
 
 
