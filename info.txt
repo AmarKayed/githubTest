@@ -32,7 +32,7 @@ Rule:
 Clone:
     git clone SSH_Key
 
-    The SSH_Key can be found on the Green Code Button on the Github Repository
+    The SSH_Key can be found on the Green Code Button on the GitHub Repository
     The SSH_Key is a link/key that is unique to our repository
 
     After cloning, we will have a hidden .git directory(folder), which contains info about
@@ -66,6 +66,37 @@ Commit:
 
     The first -m is COMPULSORY, because it indicates the title of the commit.
     The second -m is optional, because it indicates the Commit Description
+
+
+Push:
+    git push
+
+    it pushes the code live onto the GitHub Repo
+
+    In order for git push to work we have to prove GitHub that we are the owner of the GitHub Account
+
+    We have to connect our local machine(laptop/PC) to GitHub.
+
+    The way that this is done is by using SSH Keys.
+
+    We have to generate an SSH Key locally using the following command:
+        ssh-keygen -t rsa -b 4096 -C "email@example.com"
+
+    Instead of email@example.com we use the same email address that we used to login into GitHub
+    (the same email with the one used for our GitHub Account)
+
+    The above command will generate both a private and a public key.
+    The private key MUST be accesible only by the owner of the account and MUST NOT be shared with anyone else.
+    The public key is for sharing permissions to edit the repository by other members of GitHub.
+    (this one must be shared only to trusted people, or if the repo shall become open source it can be shared with anyone)
+
+    The default file for the generated SSH Key is inside our user directory/.ssh.
+    The default name for our key is id_rsa but we can choose to rename it.
+
+    We can also add a passphrase for our key, in order to restrict access to the key.
+    If we don't want to add a passphrase we simply press enter to finish the generation process.
+
+    
 
 
 
