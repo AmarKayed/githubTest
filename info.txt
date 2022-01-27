@@ -28,3 +28,21 @@ Rule:
 
 
 
+Clone:
+    git clone SSH_Key
+
+    The SSH_Key can be found on the Green Code Button on the Github Repository
+    The SSH_Key is a link/key that is unique to our repository
+
+    After cloning, we will have a hidden .git folder, which contains info about
+    our repository
+
+GIT COMMANDS CAN WORK ONLY WHEN WE ARE INSIDE OF THE MAIN DIRECTORY(folder)
+
+
+
+
+
+
+
+
