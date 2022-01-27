@@ -96,7 +96,34 @@ Push:
     We can also add a passphrase for our key, in order to restrict access to the key.
     If we don't want to add a passphrase we simply press enter to finish the generation process.
 
-    
+    After we have generated the key we must search for it on our local machine on the 
+    above mentioned location, we will have two type of keys, a private one which
+    contains no extension and a public one that has a .pub extension.
+
+    We will only upload the .pub generated key onto the GitHub interface.
+    It is okay for other people to see the .pub key, but it is NOT okay for people to see the private key.
+
+    How the process works is that:
+        We share the .pub key with GitHub
+        Everytime we want to connect to GitHub from a new machine we simply use our private key as an authenticator
+
+
+    The private key shows GitHub that we are the ones who generated the public key.
+    There is a mathematical proof that states that only the private key could've generated the public key.
+
+    We have to copy the contents of the .pub file and go to 
+        GitHub > Settings > SSH and GPG Keys > New SSH Key
+    We then can give any name we want to that key(it's not important, it's only for reference)
+    and then paste in the contents of the .pub file into the "Key" textbox and press "Add SSH Key"
+
+    We will have to type in our GitHub Password in order to confirm the addition of the key.
+
+
+
+
+
+
+
 
 
 
