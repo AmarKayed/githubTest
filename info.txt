@@ -1,0 +1,12 @@
+Git == Version Control System
+
+Version Control == Code Change Tracker
+
+Directory == folder
+
+Repository == Project == Main Directory
+
+CLI == Command Line Interface
+
+cd == Change Directory
+
