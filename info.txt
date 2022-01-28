@@ -208,7 +208,11 @@ Creating Git Repository locally:
 
 
 
+Vscode:
 
+    If we want to run Vscode and have Git enabled we can use:
+        cd your-folder-location
+        code . -n
 
 
 
