@@ -135,6 +135,58 @@ Push:
 
 
 
+Reset/Unadd:
+    git reset
+
+    It removes the added files from staging.
+
+Undoing a commit:
+    git reset HEAD~1
+    
+    It removes the last commit that was made.
+    Instead of ~1 we can put any number to indicate how many commits back we want to go to.
+
+    undoing multiple commits:
+        git log
+        git reset commitID
+
+    We go to git log and find the commit ID of the commit we want to reset back to
+    and use git reset to go back to that commit.
+
+    The reset will only say that the changes we've made that since the commit we've reset
+    back to are new changes and are uncommited, it will not remove the changes.
+    
+    If we want to also remove the changes made after the commit reset we use:
+        git reset --hard commitID
+
+    We can also try to clone the repository once again since the latest version
+    of the repository is the one with the commit reset.
+
+
+History:
+    git log
+    
+    This gives us a cronological history of every commit we have made.
+    We can scroll by using the SPACEBAR key.
+    
+    git diff
+
+    This prints all the changes we have made so far since the last commit.
+
+
+
+Remove:
+    git rm fileName
+
+    It deletes the file both in our repository and on our local machine.
+
+    We have to commit these changes and then push them.
+
+
+
+
+
+
 
 Creating Git Repository locally:
     We can simply create a folder/directory anywhere we want and then navigate
