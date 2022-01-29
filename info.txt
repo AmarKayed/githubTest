@@ -163,6 +163,17 @@ Undoing a commit:
     of the repository is the one with the commit reset.
 
 
+
+    Stack Overflow: https://stackoverflow.com/questions/1616957/how-do-you-roll-back-reset-a-git-repository-to-a-particular-commit
+
+	git reset without the --hard option resets the commit history, but not the files. 
+	With the --hard option the files in working tree are also reset.
+
+	If you wish to commit that state so that the remote repository also points to the rolled back commit do: 
+	git push <reponame> -f
+
+
+
 History:
     git log
     
