@@ -134,6 +134,14 @@ Push:
         https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 
+Pull:
+    git pull
+
+    This command updates our local repository to be up to date with the latest version of our github repository
+
+    The difference between pull and clone is that clone downloads the whole repository on our local machine
+    whilst pull simply just adds all the things that are missing from our remote/local repository(the one stored on our laptop).
+
 
 Reset/Unadd:
     git reset
