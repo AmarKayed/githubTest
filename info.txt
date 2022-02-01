@@ -242,4 +242,11 @@ Markdown styling(for README.md):
 
 
 
+Shorten path in command prompt:
+    prompt $g
 
+Shorten path in Linux Terminal:
+    PROMPT_DIRTRIM=1
+    
+    * we can use =n where n represents how many folders 
+      we would like to see at a time(Example: PROMPT_DIRTRIM=2)
