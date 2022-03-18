@@ -1,0 +1,38 @@
+git add .
+git commit -m "Title" -m "Description"
+git push
+
+git push -u origin master
+git push <reponame> -f
+
+git status
+
+git reset
+git reset fileName
+git reset commitID
+git reset --hard commitID
+
+git init
+git pull
+git clone <reponame>
+
+git branch
+git branch branchName
+git checkout branchName
+git push -u origin branchName
+
+git log
+git diff
+
+git remote -v
+git remote add origin <reponame>
+
+git rm fileName
+
+git log --graph --decorate --oneline
+
+
+Files and folders:
+    .git
+    .gitignore
+    .gitkeep
