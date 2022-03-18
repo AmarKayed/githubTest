@@ -137,16 +137,35 @@ Push:
 Pull:
     git pull
 
-    This command updates our local repository to be up to date with the latest version of our github repository
+    This command updates our local repository to be up to date with the latest version of our GitHub repository
 
     The difference between pull and clone is that clone downloads the whole repository on our local machine
     whilst pull simply just adds all the things that are missing from our remote/local repository(the one stored on our laptop).
 
 
-Reset/Unadd:
+Reset/Unadd/Unstage:
     git reset
 
-    It removes the added files from staging.
+    It removes all the added files from staging.
+
+    Remove a single file from staging area:
+        git reset fileName
+
+
+
+    Link: https://stackoverflow.com/questions/6919121/why-are-there-two-ways-to-unstage-a-file-in-git
+    git reset is preffered over git rm --cached
+    "git rm --cached fileName" is equivalent to deleting a file in terms of the git status message, 
+    the file will still remain in our local repository(our file system), but it will be treated as 
+    if it got deleted and thus in the next commit it will be removed from the GitHub repository
+    (it is literally considered a deleted file which cannot be tracked). Furthermore, if we try git add . 
+    then the file will be added to the stage area as if it just got created, thus we shouldn't use it 
+    unless we want to get rid of the file on GitHub.
+
+    Observation:
+        git reset is used both to unstage files that have been staged for tracking via the git add command, as well
+        as to revert back to previous commits(turn the local repository to a previous version).
+
 
 Undoing a commit:
     git reset HEAD~1
@@ -250,3 +269,14 @@ Shorten path in Linux Terminal:
     
     * we can use =n where n represents how many folders 
       we would like to see at a time(Example: PROMPT_DIRTRIM=2)
+      
+
+
+
+
+Git Branch:
+    Visualizing Git Branches
+    git log --graph --decorate --oneline
+
+
+
