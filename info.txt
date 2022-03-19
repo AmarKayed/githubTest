@@ -59,7 +59,8 @@ Add:
     if we want Git to track all the files in our current working directory, we simply use:
         git add .
 
-
+    Adding everything except .gitignore and .gitkeep:
+        git add *
 
 Commit:
     git commit -m "Commit Title" [-m "Commit Description"]
@@ -67,6 +68,8 @@ Commit:
     The first -m is COMPULSORY, because it indicates the title of the commit.
     The second -m is optional, because it indicates the Commit Description
 
+    We can also commit directly without using git add .
+        git commit -am "Title" -m "Description"
 
 Push:
     Initially we have to use:
@@ -278,5 +281,38 @@ Git Branch:
     Visualizing Git Branches
     git log --graph --decorate --oneline
 
+    Creating New Branches:
+        git branch branchName
+    Switching Branches:
+        git checkout branchName
+    Create + Switch New Branch:
+        git checkout -b branchName
 
+    View Existing Branches:
+        git branch
+    Rename Branch:
+        git branch -M newBranchName
+    Delete Branch:
+        git branch -D branchName
 
+    After creating a new branch, we will have to setup a new
+    upstream for the git push command:
+        git push -u origin branchName
+
+Git Merge:
+    We use git merge to merge a branch into the current branch:
+        git merge branchName
+
+    If we want to merge branches to the master branch, 
+    we have to first be in the master branch:
+        git checkout master
+        git merge branchName
+    
+    Merge conflicts occur when we have two different branches
+    with different contents on the same line of a file.
+
+    If we have a merge conflict, the merging command will modify
+    the conflicting files such that it shows us what lines of the
+    file are causing the conflict. After we modify the contents
+    such that we have a final version, we simply perform a commit
+    in which we specify that the merge has been succesful.
