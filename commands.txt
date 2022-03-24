@@ -4,6 +4,7 @@ git push
 
 git push -u origin master
 git push <reponame> -f
+git push origin -f
 git commit -am "Title" -m "Description"
 git add *
 
@@ -13,6 +14,8 @@ git reset
 git reset fileName
 git reset commitID
 git reset --hard commitID
+git reset HEAD~1
+git reset head~1
 
 git init
 git pull
@@ -20,10 +23,15 @@ git clone <reponame>
 
 git branch
 git branch branchName
+git branch -M newBranchName
+git branch -M oldBranchName newBranchName
 git branch -D branchName
 git checkout branchName
 git checkout -b branchName
 git push -u origin branchName
+
+git merge branchName
+
 
 git log
 git diff

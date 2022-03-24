@@ -175,6 +175,7 @@ Undoing a commit:
     
     It removes the last commit that was made.
     Instead of ~1 we can put any number to indicate how many commits back we want to go to.
+    It also works if we do "git reset head~1".
 
     undoing multiple commits:
         git log
@@ -200,7 +201,9 @@ Undoing a commit:
 	With the --hard option the files in working tree are also reset.
 
 	If you wish to commit that state so that the remote repository also points to the rolled back commit do: 
-	git push <reponame> -f
+	    git push <reponame> -f
+            or
+        git push origin -f
 
 
 
@@ -295,9 +298,28 @@ Git Branch:
     Delete Branch:
         git branch -D branchName
 
+    git branch -m vs git branch -M:
+        it's better to use -M, because if the branch already exists, 
+        -M must be used to force the rename to happen.
+    
+    You can also specify an additional argument in order to rename a branch
+    without currently being on that branch:
+        git branch -M oldBranchName newBranchName
+
+    It is a good practice to rename the default "master" branch to "main" whenever
+    we create a new git repository. There are a couple of reasons for this 
+    convention, one of them being that it is more logical to have a "main"
+    branch that stores all the official code, along with other auxiliary
+    branches in which we test and implement the different features of
+    our project.
+    https://stackoverflow.com/questions/64249491/why-does-git-push-main-work-on-github-when-git-push-master-does-not-also-wh
+
     After creating a new branch, we will have to setup a new
     upstream for the git push command:
         git push -u origin branchName
+
+
+
 
 Git Merge:
     We use git merge to merge a branch into the current branch:
