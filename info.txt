@@ -213,9 +213,17 @@ History:
     This gives us a cronological history of every commit we have made.
     We can scroll by using the SPACEBAR key.
     
-    git diff
+    
 
-    This prints all the changes we have made so far since the last commit.
+    Print all the changes we have made so far since the last commit.
+        git diff
+    Print number of lines changed in human-readable output:
+        git diff --stat
+    Print all changes made between two commits:
+        git diff commitID1 commitID2
+
+    * if we want only the number of lines for the last command we also use --stat
+
 
 
 
