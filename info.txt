@@ -235,7 +235,13 @@ Remove:
     We have to commit these changes and then push them.
 
 
-
+.gitignore problems:
+    git rm -r --cached filePath
+    
+    If you push files/folders to github but then realise you want to ignore them and thus create a .gitignore file containing them or if you have files that get generated/created dynamically after a build/run of the project then you might still see them in your git status command.
+    Solution:
+        - Create a .gitignore file and add the problematic files/folders there
+        - Use "git rm -r --cached ." to remove all the files/folders that were pushed onto github before the .gitignore file was created
 
 
 
